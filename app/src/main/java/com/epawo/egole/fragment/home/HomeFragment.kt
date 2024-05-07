@@ -59,7 +59,7 @@ class HomeFragment : BaseFragment(), WalletClickListener, HomeContract.HomeView 
 
     private fun setListeners(){
         binding.cashoutLayout.setOnClickListener { onCashoutLayoutClick() }
-        binding.transferLayout.setOnClickListener { onTransferLayoutClick() }
+        binding.transferLayout.setOnClickListener { onInsuranceLayoutClick() }
         binding.cardLayout.setOnClickListener { onCardLayoutClick() }
 //        binding.autoRegLayout.setOnClickListener { onAutoRegLayoutClick() }
 //        binding.more.setOnClickListener{ onMoreButtonClicked() }
@@ -127,12 +127,20 @@ class HomeFragment : BaseFragment(), WalletClickListener, HomeContract.HomeView 
         navigate(NavigationCommand.To(actionHomeFragmentToFundTransferFragment()))
     }
 
+    private fun onInsuranceLayoutClick(){
+        navigate(NavigationCommand.To(actionHomeFragmentToInsuranceFragment()))
+    }
+
     private fun actionHomeFragmentToProfileFragment() : NavDirections {
         return ActionOnlyNavDirections(R.id.action_homeFragment_to_profileFragment)
     }
 
     private fun actionHomeFragmentToFundTransferFragment() : NavDirections {
         return ActionOnlyNavDirections(R.id.action_homeFragment_to_fundTransferFragment)
+    }
+
+    private fun actionHomeFragmentToInsuranceFragment() : NavDirections {
+        return ActionOnlyNavDirections(R.id.action_homeFragment_to_insuranceFragment)
     }
 
     private fun actionHomeFragmentToCardTransferFragment() : NavDirections {

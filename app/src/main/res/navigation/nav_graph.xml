@@ -82,6 +82,13 @@
         android:name="com.epawo.egole.fragment.home.HomeFragment"
         android:label="HomeFragment" >
         <action
+            android:id="@+id/action_homeFragment_to_insuranceFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/insuranceFragment" />
+        <action
             android:id="@+id/action_homeFragment_to_fundTransferFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
@@ -500,4 +507,26 @@
         tools:layout="@layout/layout_betting_lookup_fragment"
         android:name="com.epawo.egole.fragment.betting.BettingLookupFragment"
         android:label="BettingLookupFragment" />
+    <fragment
+        android:id="@+id/insuranceFragment"
+        tools:layout="@layout/layout_insurance_fragment"
+        android:name="com.epawo.egole.fragment.insurance.InsuranceFragment"
+        android:label="@string/insurance">
+
+        <action
+            android:id="@+id/action_insuranceFragment_to_insuranceDetailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/insuranceDetailFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/insuranceDetailFragment"
+        tools:layout="@layout/layout_insurance_detail_fragment"
+        android:name="com.epawo.egole.fragment.insurance.InsuranceDetailFragment"
+        android:label="@string/insurance_detail"
+        />
 </navigation>

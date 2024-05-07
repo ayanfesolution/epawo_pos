@@ -41,6 +41,9 @@ class UrlConstants {
         const val BETTING_PROVIDERS = "VasVMP/BettingProvider"
         const val BETTING_LOOKUP = "VasVMP/BettingLookup"
 
+        //Insurance
+        const val INSURANCE = "Insurance/GetDetailsPolicy"
+
         //WALLET BALANCE
         const val WALLET_BALANCE = "Account/WalletBalance/{mainAccount}"
 

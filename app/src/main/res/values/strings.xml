@@ -127,6 +127,10 @@
     <string name="enter_subscriber_number">Enter Subscriber Number</string>
     <string name="provider_name">Provider Name</string>
     <string name="provider_code">Provider Code</string>
+    <string name="policy">Policy Number</string>
+    <string name="enter_policy_here">Enter Policy  Number</string>
+    <string name="insurance_detail">Insurance Policy Details</string>
+    <string name="proceed">Proceed</string>
 
     <string-array name="provider">
         <item>9MOBILE</item>

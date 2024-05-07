@@ -31,6 +31,8 @@ import com.epawo.egole.model.fund_transfer.TransferFundRequest
 import com.epawo.egole.model.fund_transfer.TransferFundResponse
 import com.epawo.egole.model.fund_transfer.ValidateBankRequest
 import com.epawo.egole.model.fund_transfer.ValidateBankResponse
+import com.epawo.egole.model.insurance.InsuranceDetailResponse
+import com.epawo.egole.model.insurance.InsuranceDetailsRequest
 import com.epawo.egole.model.login.request.LoginRequest
 import com.epawo.egole.model.login.response.LoginResponse
 import com.epawo.egole.model.ticket.TicketResponseModel
@@ -110,6 +112,10 @@ interface NetworkService {
     @GET(UrlConstants.BETTING_PROVIDERS)
     fun bettingProviders(@Header("Authorization") token : String)
             : Observable<BettingProviderResponse>
+
+    @POST(UrlConstants.INSURANCE)
+    fun insuranceDetails(@Header("Authorization") token : String, @Body request : InsuranceDetailsRequest)
+            : Observable<InsuranceDetailResponse>
 
     @POST(UrlConstants.BETTING_LOOKUP)
     fun bettingLookup(@Header("Authorization") token : String, @Body request : BettingLookupRequest)
