@@ -1,0 +1,142 @@
+<resources>
+    <string name="app_name">Epawo</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="login">Login</string>
+    <string name="enter_your_registered_email_naddress_to_reset_your_password">Enter your registered Email\naddress to reset your password</string>
+    <string name="enter_your_email_address">Enter your Email Address</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="transactions">Transactions</string>
+    <string name="cash_out">Cash Out</string>
+    <string name="insurance">Insurance</string>
+    <string name="transfer">Transfer</string>
+    <string name="pay_bills">Pay Bills</string>
+    <string name="buy_airtime">Buy\nAirtime</string>
+    <string name="buy_data">Buy Data</string>
+    <string name="card_ntransfers">Card\nTransfers</string>
+    <string name="history">History</string>
+    <string name="transaction_history">Transaction History</string>
+    <string name="wallet_balance">Wallet Balance</string>
+    <string name="support">Support</string>
+    <string name="ticket_list">Ticket List</string>
+    <string name="create_ticket">Create Ticket</string>
+    <string name="autoreg">AutoReg</string>
+    <string name="cable_tv">Cable TV</string>
+    <string name="electricity">Electricity</string>
+    <string name="education">Education</string>
+    <string name="amount">Amount</string>
+    <string name="enter_amount_here">Enter amount here</string>
+    <string name="beneficiary_bank">Beneficiary Bank</string>
+    <string name="select_bank">Select Bank</string>
+    <string name="account_number">Account Number</string>
+    <string name="beneficiary_s_account_number">Beneficiary\'s Account Number</string>
+    <string name="beneficiary_s_account_name">Beneficiary\'s Account Name</string>
+    <string name="narration">Narration</string>
+    <string name="account_name">Account Name</string>
+    <string name="continues">Continue</string>
+    <string name="enter_your_remarks_here">Enter your remarks here</string>
+    <string name="card_transfer">Card Transfer</string>
+    <string name="packages">Package</string>
+    <string name="select_package">Select Package</string>
+    <string name="provider">Provider</string>
+    <string name="select_provider">Select Provider</string>
+    <string name="decoder_number">Decoder Number</string>
+    <string name="enter_decoder_number">Enter Decoder Number</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="meter_number">Meter Number</string>
+    <string name="enter_meter_number">Enter Meter Number</string>
+    <string name="enter_customer_name">Enter Customer Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="waec_payment">WAEC Payment</string>
+    <string name="number_of_pins">Number of PINS</string>
+    <string name="cost">Cost</string>
+    <string name="enter_reference_number">Enter Reference Number</string>
+    <string name="reference_number">Reference Number</string>
+    <string name="select_state">Select State</string>
+    <string name="subject">Subject</string>
+    <string name="enter_subject_of_ticket">Enter Subject of ticket</string>
+    <string name="description">Description</string>
+    <string name="enter_ticket_details_here">Enter ticket details here</string>
+    <string name="submit_ticket">Submit Ticket</string>
+    <string name="username_error">Please input your username</string>
+    <string name="password_error">Please input your password</string>
+    <string name="error_transfer_amount">Please input amount to transfer</string>
+    <string name="error_select_bank">Please select beneficiary bank</string>
+    <string name="error_account_number">Please input beneficiary account number</string>
+    <string name="error_invalid_account_number">Please input valid account number</string>
+    <string name="transfer_details">Transfer Details</string>
+    <string name="transfer_fund">Transfer Fund</string>
+    <string name="close">Close</string>
+    <string name="print_receipt">Print Receipt</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="airtime_recharge">Airtime Recharge</string>
+    <string name="airtime_recharge_details">Airtime Recharge Details</string>
+    <string name="meter_type">Meter Type</string>
+    <string name="select_meter_type">Select Meter Type</string>
+    <string name="electricity_payment_details">Electricity Payment Details</string>
+    <string name="data_recharge">Data Recharge</string>
+    <string name="bundles">Bundle</string>
+    <string name="select_data_bundle">Select Data Bundle</string>
+    <string name="data_recharge_details">Data Recharge Details</string>
+    <string name="cable_payment_details">Cable Payment Details</string>
+    <string name="insert_card">Insert Card</string>
+    <string name="savings">Savings</string>
+    <string name="current">Current</string>
+    <string name="mastercard">MasterCard</string>
+    <string name="visacard">Visa Card</string>
+    <string name="vervecard">Verve Card</string>
+    <string name="debit_card">Debit Card</string>
+    <string name="transaction_status">Transaction Status</string>
+    <string name="transaction_type">Transaction Type</string>
+    <string name="current_balance">Current Balance</string>
+    <string name="previous_balance">Previous Balance</string>
+    <string name="customer_info">Customer Info</string>
+    <string name="transaction_rrn">Transaction RRN</string>
+    <string name="transaction_stan">Transaction Stan</string>
+    <string name="transaction_reference">Reference</string>
+    <string name="print">Print</string>
+    <string name="please_input_your_email_address">Please input your email address</string>
+    <string name="input_a_valid_email_address">Input a valid email address</string>
+    <string name="you_have_not_raised_any_ticket_s">You have not raised any ticket(s)</string>
+    <string name="pos_transfer_account_number">POS Transfer Account Number</string>
+    <string name="more">More</string>
+    <string name="profile">Profile</string>
+    <string name="set_transaction_pin">Set Transaction PIN</string>
+    <string name="reset_passwords">Reset Password</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="enter_first_name">Enter First Name</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="enter_last_name">Enter Last Name</string>
+    <string name="select_gender">Select Gender</string>
+    <string name="gender">Gender</string>
+    <string name="betting">Betting</string>
+    <string name="subscriber_number">Subscriber Number</string>
+    <string name="enter_subscriber_number">Enter Subscriber Number</string>
+    <string name="provider_name">Provider Name</string>
+    <string name="provider_code">Provider Code</string>
+
+    <string-array name="provider">
+        <item>9MOBILE</item>
+        <item>AIRTEL</item>
+        <item>GLO</item>
+        <item>MTN</item>
+    </string-array>
+
+    <string-array name="meter_type">
+        <item>Prepaid</item>
+        <item>Postpaid</item>
+    </string-array>
+</resources>

@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.epawo.egole.fragment.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.epawo.egole.fragment.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        tools:layout="@layout/layout_splash_fragment"
+        android:name="com.epawo.egole.fragment.splash.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        tools:layout="@layout/layout_login_fragment"
+        android:name="com.epawo.egole.fragment.login.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_resetPasswordFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/resetPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        tools:layout="@layout/layout_reset_password_fragment"
+        android:name="com.epawo.egole.fragment.reset_password.ResetPasswordFragment"
+        android:label="ResetPasswordFragment" />
+    <fragment
+        android:id="@+id/homeFragment"
+        tools:layout="@layout/layout_home_fragment"
+        android:name="com.epawo.egole.fragment.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_fundTransferFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/fundTransferFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cardTransferFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/cardTransferFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_autoRegFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/autoRegFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cashoutFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/cashoutFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_moreHomeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/moreHomeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/billsFragment"
+        tools:layout="@layout/layout_bills_fragment"
+        android:name="com.epawo.egole.fragment.bills.BillsFragment"
+        android:label="BillsFragment" >
+        <action
+            android:id="@+id/action_billsFragment_to_cableTvFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/cableTvFragment" />
+        <action
+            android:id="@+id/action_billsFragment_to_electricityFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/electricityFragment" />
+        <action
+            android:id="@+id/action_billsFragment_to_waecPaymentFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/waecPaymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fundTransferFragment"
+        tools:layout="@layout/layout_fund_transfer_fragment"
+        android:name="com.epawo.egole.fragment.transfer.fund_transfer.FundTransferFragment"
+        android:label="FundTransferFragment" >
+        <action
+            android:id="@+id/action_fundTransferFragment_to_transferDetailsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/transferDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardTransferFragment"
+        tools:layout="@layout/layout_card_transfer_fragment"
+        android:name="com.epawo.egole.fragment.transfer.card_transfer.CardTransferFragment"
+        android:label="CardTransferFragment" />
+    <fragment
+        android:id="@+id/cableTvFragment"
+        tools:layout="@layout/layout_cable_tv_fragment"
+        android:name="com.epawo.egole.fragment.cable_tv.CableTvFragment"
+        android:label="CableTvFragment" >
+        <action
+            android:id="@+id/action_cableTvFragment_to_cablePaymentDetailsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/cablePaymentDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/electricityFragment"
+        tools:layout="@layout/layout_electricity_fragment"
+        android:name="com.epawo.egole.fragment.electricity.ElectricityFragment"
+        android:label="ElectricityFragment" >
+        <action
+            android:id="@+id/action_electricityFragment_to_electricityDetailsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/electricityDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/waecPaymentFragment"
+        tools:layout="@layout/layout_waec_payment_fragment"
+        android:name="com.epawo.egole.fragment.education.WaecPaymentFragment"
+        android:label="WaecPaymentFragment" />
+    <fragment
+        android:id="@+id/autoRegFragment"
+        tools:layout="@layout/layout_auto_reg_fragment"
+        android:name="com.epawo.egole.fragment.auto_reg.AutoRegFragment"
+        android:label="AutoRegFragment" />
+    <fragment
+        android:id="@+id/createTicketFragment"
+        tools:layout="@layout/layout_create_ticket_fragment"
+        android:name="com.epawo.egole.fragment.ticket.CreateTicketFragment"
+        android:label="CreateTicketFragment" />
+    <fragment
+        android:id="@+id/ticketListFragment"
+        tools:layout="@layout/layout_ticket_list_fragment"
+        android:name="com.epawo.egole.fragment.ticket.TicketListFragment"
+        android:label="TicketListFragment" />
+    <fragment
+        android:id="@+id/transferDetailsFragment"
+        tools:layout="@layout/layout_transfer_details_fragment"
+        android:name="com.epawo.egole.fragment.transfer.fund_transfer.TransferDetailsFragment"
+        android:label="TransferDetailsFragment" >
+        <action
+            android:id="@+id/action_transferDetailsFragment_to_homeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/transferDetailsFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/airtimeRechargeFragment"
+        tools:layout="@layout/layout_airtime_recharge_fragment"
+        android:name="com.epawo.egole.fragment.airtime.airtime.AirtimeRechargeFragment"
+        android:label="AirtimeRechargeFragment" >
+        <action
+            android:id="@+id/action_airtimeRechargeFragment_to_airtimeRechargeDetailsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/airtimeRechargeDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/airtimeRechargeDetailsFragment"
+        tools:layout="@layout/layout_airtime_recharge_details_fragment"
+        android:name="com.epawo.egole.fragment.airtime.airtime.AirtimeRechargeDetailsFragment"
+        android:label="AirtimeRechargeDetailsFragment" >
+        <action
+            android:id="@+id/action_airtimeRechargeDetailsFragment_to_homeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/airtimeRechargeDetailsFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/electricityDetailsFragment"
+        tools:layout="@layout/layout_electricity_details_fragment"
+        android:name="com.epawo.egole.fragment.electricity.ElectricityDetailsFragment"
+        android:label="ElectricityDetailsFragment" >
+        <action
+            android:id="@+id/action_electricityDetailsFragment_to_homeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/electricityDetailsFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataRechargeDetailsFragment"
+        tools:layout="@layout/layout_data_recharge_details_fragment"
+        android:name="com.epawo.egole.fragment.airtime.data.DataRechargeDetailsFragment"
+        android:label="DataRechargeDetailsFragment" >
+        <action
+            android:id="@+id/action_dataRechargeDetailsFragment_to_homeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/dataRechargeDetailsFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataRechargeFragment"
+        tools:layout="@layout/layout_airtime_date_fragment"
+        android:name="com.epawo.egole.fragment.airtime.data.DataRechargeFragment"
+        android:label="DataRechargeFragment" >
+        <action
+            android:id="@+id/action_dataRechargeFragment_to_dataRechargeDetailsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/dataRechargeDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cablePaymentDetailsFragment"
+        tools:layout="@layout/layout_cable_paymet_details_fragment"
+        android:name="com.epawo.egole.fragment.cable_tv.CablePaymentDetailsFragment"
+        android:label="CablePaymentDetailsFragment" >
+        <action
+            android:id="@+id/action_cablePaymentDetailsFragment_to_homeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/cablePaymentDetailsFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/cashoutFragment"
+        tools:layout="@layout/layout_cashout_fragment"
+        android:name="com.epawo.egole.fragment.cashout.CashoutFragment"
+        android:label="CashoutFragment" >
+        <action
+            android:id="@+id/action_cashoutFragment_to_searchCardFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/searchCardFragment" />
+        <action
+            android:id="@+id/action_cashoutFragment_to_loginFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_cashoutFragment_to_printFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/printFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchCardFragment"
+        tools:layout="@layout/layout_insert_card_fragment"
+        android:name="com.epawo.egole.fragment.cashout.SearchCardFragment"
+        android:label="SearchCardFragment" />
+    <fragment
+        android:id="@+id/printFragment"
+        android:name="com.epawo.egole.fragment.cashout.PrintFragment"
+        tools:layout="@layout/print_fragment_layout"
+        android:label="PrintFragment" >
+        <action
+            android:id="@+id/action_printFragment_to_homeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/printFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transactionHistoryFragment"
+        tools:layout="@layout/layout_transaction_history"
+        android:name="com.epawo.egole.fragment.transactions.TransactionHistoryFragment"
+        android:label="TransactionHistoryFragment" >
+        <action
+            android:id="@+id/action_transactionHistoryFragment_to_transactionDetailsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/transactionDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transactionDetailsFragment"
+        tools:layout="@layout/layout_transaction_details_fragment"
+        android:name="com.epawo.egole.fragment.transactions.TransactionDetailsFragment"
+        android:label="TransactionDetailsFragment" />
+    <fragment
+        android:id="@+id/moreHomeFragment"
+        tools:layout="@layout/layout_home_more_fragment"
+        android:name="com.epawo.egole.fragment.home.MoreHomeFragment"
+        android:label="MoreHomeFragment" >
+        <action
+            android:id="@+id/action_moreHomeFragment_to_createTicketFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/createTicketFragment" />
+        <action
+            android:id="@+id/action_moreHomeFragment_to_ticketListFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/ticketListFragment" />
+        <action
+            android:id="@+id/action_moreHomeFragment_to_airtimeRechargeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/airtimeRechargeFragment" />
+        <action
+            android:id="@+id/action_moreHomeFragment_to_dataRechargeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/dataRechargeFragment" />
+        <action
+            android:id="@+id/action_moreHomeFragment_to_transactionHistoryFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/transactionHistoryFragment" />
+        <action
+            android:id="@+id/action_moreHomeFragment_to_billsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/billsFragment" />
+        <action
+            android:id="@+id/action_moreHomeFragment_to_cashoutFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/cashoutFragment" />
+        <action
+            android:id="@+id/action_moreHomeFragment_to_autoRegFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/autoRegFragment" />
+        <action
+            android:id="@+id/action_moreHomeFragment_to_cardTransferFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/cardTransferFragment" />
+        <action
+            android:id="@+id/action_moreHomeFragment_to_fundTransferFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/fundTransferFragment" />
+        <action
+            android:id="@+id/action_moreHomeFragment_to_bettingFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/bettingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        tools:layout="@layout/layout_profile_fragment"
+        android:name="com.epawo.egole.fragment.profile.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        tools:layout="@layout/layout_edit_profile_fragment"
+        android:name="com.epawo.egole.fragment.profile.editProfile.EditProfileFragment"
+        android:label="EditProfileFragment" />
+    <fragment
+        android:id="@+id/bettingFragment"
+        tools:layout="@layout/layout_betting_fragment"
+        android:name="com.epawo.egole.fragment.betting.BettingFragment"
+        android:label="BettingFragment" >
+        <action
+            android:id="@+id/action_bettingFragment_to_bettingLookupFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/bettingLookupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bettingLookupFragment"
+        tools:layout="@layout/layout_betting_lookup_fragment"
+        android:name="com.epawo.egole.fragment.betting.BettingLookupFragment"
+        android:label="BettingLookupFragment" />
+</navigation>
