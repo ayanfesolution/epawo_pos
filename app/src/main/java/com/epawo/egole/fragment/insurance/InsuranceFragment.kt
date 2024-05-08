@@ -88,7 +88,7 @@ class InsuranceFragment : BaseFragment(), InsurancePolicyContract.InsurancePolic
         bundle.putString("bizUnit",response.data.bizUnitField)
         bundle.putString("insuredName", response.data.insuredNameField)
         bundle.putString("insuredEmail", response.data.insuredEmailField)
-        bundle.putString("amount", response.data.mPremiumField.toString())
+        bundle.putString("amount", response.data.instPremiumField.toString())
         navigate(R.id.action_insuranceFragment_to_insuranceDetailFragment, bundle)
 //        bundle.putString("providerCode", providerCode)
 //        bundle.putString("decoderNumber", cableNumber)

@@ -50,7 +50,7 @@ class HomeFragment : BaseFragment(), WalletClickListener, HomeContract.HomeView 
         init()
     }
 
-    private fun init(){
+    private fun init(){zzzzz
         presenter = HomePresenter(this)
         setListeners()
         loadWalletsList()
@@ -58,20 +58,20 @@ class HomeFragment : BaseFragment(), WalletClickListener, HomeContract.HomeView 
     }
 
     private fun setListeners(){
-        binding.cashoutLayout.setOnClickListener { onCashoutLayoutClick() }
+      //  binding.cashoutLayout.setOnClickListener { onCashoutLayoutClick() }
         binding.transferLayout.setOnClickListener { onInsuranceLayoutClick() }
         binding.cardLayout.setOnClickListener { onCardLayoutClick() }
 //        binding.autoRegLayout.setOnClickListener { onAutoRegLayoutClick() }
 //        binding.more.setOnClickListener{ onMoreButtonClicked() }
-        binding.balanceLayer.refreshBalance.setOnClickListener { onRefreshBalanceClicked() }
+    //    binding.balanceLayer.refreshBalance.setOnClickListener { onRefreshBalanceClicked() }
         binding.balanceLayer.profileImage.setOnClickListener { onProfileImageClicked() }
-        binding.balanceLayer.constraintLayout2.setOnClickListener { onWalletLayerClicked() }
+       // binding.balanceLayer.constraintLayout2.setOnClickListener { onWalletLayerClicked() }
     }
 
     private fun setControls(){
         binding.balanceLayer.companyName.text = AppPreferences().getCompanyName(mainActivity).toString()
         val walletBalance = AppPreferences().getWalletBalance(mainActivity).toString()
-        binding.balanceLayer.walletBalance.text = Utility.formatCurrency(walletBalance.toDouble())
+      //  binding.balanceLayer.walletBalance.text = Utility.formatCurrency(walletBalance.toDouble())
         binding.balanceLayer.companyName.text = AppPreferences().getCompanyName(mainActivity)
     }
 
@@ -80,8 +80,8 @@ class HomeFragment : BaseFragment(), WalletClickListener, HomeContract.HomeView 
         val type: Type = object : TypeToken<List<Wallets?>?>() {}.type
         walletList = Gson().fromJson(storedWalletList, type)
 
-        binding.balanceLayer.walletName.text = walletList[0].bankName
-        binding.balanceLayer.accountNumber.text = walletList[0].accountNumber
+   //     binding.balanceLayer.walletName.text = walletList[0].bankName
+  //      binding.balanceLayer.accountNumber.text = walletList[0].accountNumber
 
     }
 
@@ -144,7 +144,7 @@ class HomeFragment : BaseFragment(), WalletClickListener, HomeContract.HomeView 
     }
 
     private fun actionHomeFragmentToCardTransferFragment() : NavDirections {
-        return ActionOnlyNavDirections(R.id.action_moreHomeFragment_to_transactionHistoryFragment)
+        return ActionOnlyNavDirections(R.id.action_homeFragment_to_cardTransferFragment)
     }
 
     private fun actionHomeFragmentToAutoRegFragment() : NavDirections {
@@ -166,8 +166,8 @@ class HomeFragment : BaseFragment(), WalletClickListener, HomeContract.HomeView 
 
     override fun onWalletClicked(wallet: Wallets) {
        dialog.dismiss()
-        binding.balanceLayer.walletName.text = wallet.bankName
-        binding.balanceLayer.accountNumber.text = wallet.accountNumber
+      //  binding.balanceLayer.walletName.text = wallet.bankName
+     //   binding.balanceLayer.accountNumber.text = wallet.accountNumber
     }
 
     override fun showToast(message: String?) {
@@ -177,7 +177,7 @@ class HomeFragment : BaseFragment(), WalletClickListener, HomeContract.HomeView 
     override fun onSuccess(response: WalletBalanceResponse) {
         val balance = response.walletBalance
         AppPreferences().setWalletBalance(mainActivity, balance.toString())
-        binding.balanceLayer.walletBalance.text = Utility.formatCurrency(balance)
+       // binding.balanceLayer.walletBalance.text = Utility.formatCurrency(balance)
         toastShort("Wallet balance updated...")
 
     }

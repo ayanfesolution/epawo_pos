@@ -25,7 +25,7 @@
     <string name="buy_airtime">Buy\nAirtime</string>
     <string name="buy_data">Buy Data</string>
     <string name="card_ntransfers">Card\nTransfers</string>
-    <string name="history">History</string>
+    <string name="history">Transaction History</string>
     <string name="transaction_history">Transaction History</string>
     <string name="wallet_balance">Wallet Balance</string>
     <string name="support">Support</string>

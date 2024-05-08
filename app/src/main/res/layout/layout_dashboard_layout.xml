@@ -34,52 +34,52 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileImage" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
-        android:clickable="true"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2">
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/constraintLayout2"-->
+<!--        android:clickable="true"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline7"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/view2">-->
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/walletName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="EgolePay MFB"
-            android:textColor="#373737"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/walletName"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:text="EgolePay MFB"-->
+<!--            android:textColor="#373737"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/accountNumber"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="12345678901"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/walletName" />
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/accountNumber"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:text="12345678901"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="16sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/walletName" />-->
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            app:layout_constraintBottom_toBottomOf="@+id/accountNumber"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/walletName"
-            app:srcCompat="@drawable/baseline_arrow_drop_down_24" />
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView4"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/accountNumber"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/walletName"-->
+<!--            app:srcCompat="@drawable/baseline_arrow_drop_down_24" />-->
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline7"
@@ -97,43 +97,43 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/user_cicrle" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/walletBalance"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:text="N500,000,00.80"
-        android:textColor="@color/app_color"
-        android:textDirection="ltr"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/refreshBalance"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="@+id/constraintLayout2" />
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--        android:id="@+id/walletBalance"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="10dp"-->
+<!--        android:layout_marginEnd="10dp"-->
+<!--        android:text="N500,000,00.80"-->
+<!--        android:textColor="@color/app_color"-->
+<!--        android:textDirection="ltr"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/refreshBalance"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/guideline7"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/constraintLayout2" />-->
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Wallet Balance"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/walletBalance"
-        app:layout_constraintTop_toBottomOf="@+id/walletBalance" />
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--        android:id="@+id/textView10"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:text="Wallet Balance"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="14sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/walletBalance"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/walletBalance" />-->
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/refreshBalance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="@+id/walletBalance"
-        app:layout_constraintEnd_toEndOf="@+id/companyName"
-        app:layout_constraintTop_toTopOf="@+id/walletBalance"
-        app:srcCompat="@drawable/baseline_refresh_24" />
+<!--    <androidx.appcompat.widget.AppCompatImageView-->
+<!--        android:id="@+id/refreshBalance"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:paddingTop="5dp"-->
+<!--        android:paddingBottom="5dp"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/walletBalance"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/companyName"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/walletBalance"-->
+<!--        app:srcCompat="@drawable/baseline_refresh_24" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
