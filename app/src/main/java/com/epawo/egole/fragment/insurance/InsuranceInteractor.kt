@@ -29,7 +29,7 @@ class InsuranceInteractor(listener: InsurancePolicyContract.InsurancePolicyListe
 
     private fun loadInsuranceObserver(token: String, request: InsuranceDetailsRequest): Observable<InsuranceDetailResponse>{
         return RetrofitInstance.getRetrofitInstance()!!.create(NetworkService::class.java)
-            .insuranceDetails(token, request)
+            .insuranceDetails("Bearer $token", request)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
     }
