@@ -50,7 +50,7 @@ class HomeFragment : BaseFragment(), WalletClickListener, HomeContract.HomeView 
         init()
     }
 
-    private fun init(){zzzzz
+    private fun init(){
         presenter = HomePresenter(this)
         setListeners()
         loadWalletsList()
