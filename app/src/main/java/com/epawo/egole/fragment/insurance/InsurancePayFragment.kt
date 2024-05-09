@@ -148,6 +148,7 @@ class InsurancePayFragment: BaseFragment(), InsurancePolicyContract.InsuranceCas
     private fun onNextButtonClick(){
         if(Utility.isNetworkAvailable(mainActivity)){
             try{
+                amountInputed = amount
                 val intAmount = Integer.parseInt(amount) * 100
                 topWiseDevice.startEmv(intAmount.toString())
             }catch (e : NumberFormatException){
@@ -364,7 +365,15 @@ class InsurancePayFragment: BaseFragment(), InsurancePolicyContract.InsuranceCas
     }
 
     override fun onSuccess(response: InsuranceCashoutResponse) {
-        TODO("Not yet implemented")
+        val amount = amountInputed
+        val pan = Utility.maskCardPan(cardNumber)
+        val status = "Transaction Successful"
+        val responseCode = response.status
+        val description = response.message
+        val terminalID = terminalId
+        val ref = "reference"
+
+        getTransactionDetails(responseCode.toString(),pan,amount,status,description, terminalID,customerName,ref)
     }
 
 }
