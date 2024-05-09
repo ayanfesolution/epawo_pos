@@ -527,6 +527,36 @@
         android:id="@+id/insuranceDetailFragment"
         tools:layout="@layout/layout_insurance_detail_fragment"
         android:name="com.epawo.egole.fragment.insurance.InsuranceDetailFragment"
-        android:label="@string/insurance_detail"
-        />
+        android:label="@string/insurance_detail">
+
+        <action
+            android:id="@+id/action_insuranceDetailFragment_to_insuranceCashout"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/insuranceCashoutFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/insuranceCashoutFragment"
+        tools:layout="@layout/layout_insurancepay_fragment"
+        android:name="com.epawo.egole.fragment.insurance.InsurancePayFragment">
+
+        <action
+            android:id="@+id/action_insuranceCashoutFragment_to_searchCardFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/searchCardFragment" />
+
+        <action
+            android:id="@+id/action_insuranceCashout_to_printFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/printFragment" />
+    </fragment>
 </navigation>

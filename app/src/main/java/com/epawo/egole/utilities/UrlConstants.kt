@@ -43,6 +43,7 @@ class UrlConstants {
 
         //Insurance
         const val INSURANCE = "Insurance/GetDetailsPolicy"
+        const val INSURANCE_CASHOUT = "Insurance/CustodianPostTransaction"
 
         //WALLET BALANCE
         const val WALLET_BALANCE = "Account/WalletBalance/{mainAccount}"
