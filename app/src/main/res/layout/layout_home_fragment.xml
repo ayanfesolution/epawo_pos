@@ -81,18 +81,18 @@
                         android:padding="10dp">
 
                         <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/transfer" />
+                            android:layout_width="140dp"
+                            android:layout_height="62dp"
+                            app:srcCompat="@drawable/custodianlogo" />
 
-                        <androidx.appcompat.widget.AppCompatTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="25dp"
-                            android:text="@string/insurance"
-                            android:textColor="@color/app_dark"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
+<!--                        <androidx.appcompat.widget.AppCompatTextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="10dp"-->
+<!--                            android:text="@string/insurance"-->
+<!--                            android:textColor="@color/app_dark"-->
+<!--                            android:textSize="16sp"-->
+<!--                            android:textStyle="bold" />-->
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
                     <androidx.appcompat.widget.LinearLayoutCompat

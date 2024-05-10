@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.epawo.egole.fragment.FirstFragment"
+        android:name="com.epawo.custodian.fragment.FirstFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
 
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.epawo.egole.fragment.SecondFragment"
+        android:name="com.epawo.custodian.fragment.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
 
@@ -28,7 +28,7 @@
     <fragment
         android:id="@+id/splashFragment"
         tools:layout="@layout/layout_splash_fragment"
-        android:name="com.epawo.egole.fragment.splash.SplashFragment"
+        android:name="com.epawo.custodian.fragment.splash.SplashFragment"
         android:label="SplashFragment" >
         <action
             android:id="@+id/action_splashFragment_to_loginFragment"
@@ -52,7 +52,7 @@
     <fragment
         android:id="@+id/loginFragment"
         tools:layout="@layout/layout_login_fragment"
-        android:name="com.epawo.egole.fragment.login.LoginFragment"
+        android:name="com.epawo.custodian.fragment.login.LoginFragment"
         android:label="LoginFragment" >
         <action
             android:id="@+id/action_loginFragment_to_resetPasswordFragment"
@@ -74,12 +74,12 @@
     <fragment
         android:id="@+id/resetPasswordFragment"
         tools:layout="@layout/layout_reset_password_fragment"
-        android:name="com.epawo.egole.fragment.reset_password.ResetPasswordFragment"
+        android:name="com.epawo.custodian.fragment.reset_password.ResetPasswordFragment"
         android:label="ResetPasswordFragment" />
     <fragment
         android:id="@+id/homeFragment"
         tools:layout="@layout/layout_home_fragment"
-        android:name="com.epawo.egole.fragment.home.HomeFragment"
+        android:name="com.epawo.custodian.fragment.home.HomeFragment"
         android:label="HomeFragment" >
         <action
             android:id="@+id/action_homeFragment_to_insuranceFragment"
@@ -134,7 +134,7 @@
     <fragment
         android:id="@+id/billsFragment"
         tools:layout="@layout/layout_bills_fragment"
-        android:name="com.epawo.egole.fragment.bills.BillsFragment"
+        android:name="com.epawo.custodian.fragment.bills.BillsFragment"
         android:label="BillsFragment" >
         <action
             android:id="@+id/action_billsFragment_to_cableTvFragment"
@@ -161,7 +161,7 @@
     <fragment
         android:id="@+id/fundTransferFragment"
         tools:layout="@layout/layout_fund_transfer_fragment"
-        android:name="com.epawo.egole.fragment.transfer.fund_transfer.FundTransferFragment"
+        android:name="com.epawo.custodian.fragment.transfer.fund_transfer.FundTransferFragment"
         android:label="FundTransferFragment" >
         <action
             android:id="@+id/action_fundTransferFragment_to_transferDetailsFragment"
@@ -174,12 +174,12 @@
     <fragment
         android:id="@+id/cardTransferFragment"
         tools:layout="@layout/layout_card_transfer_fragment"
-        android:name="com.epawo.egole.fragment.transfer.card_transfer.CardTransferFragment"
+        android:name="com.epawo.custodian.fragment.transfer.card_transfer.CardTransferFragment"
         android:label="CardTransferFragment" />
     <fragment
         android:id="@+id/cableTvFragment"
         tools:layout="@layout/layout_cable_tv_fragment"
-        android:name="com.epawo.egole.fragment.cable_tv.CableTvFragment"
+        android:name="com.epawo.custodian.fragment.cable_tv.CableTvFragment"
         android:label="CableTvFragment" >
         <action
             android:id="@+id/action_cableTvFragment_to_cablePaymentDetailsFragment"
@@ -192,7 +192,7 @@
     <fragment
         android:id="@+id/electricityFragment"
         tools:layout="@layout/layout_electricity_fragment"
-        android:name="com.epawo.egole.fragment.electricity.ElectricityFragment"
+        android:name="com.epawo.custodian.fragment.electricity.ElectricityFragment"
         android:label="ElectricityFragment" >
         <action
             android:id="@+id/action_electricityFragment_to_electricityDetailsFragment"
@@ -205,27 +205,27 @@
     <fragment
         android:id="@+id/waecPaymentFragment"
         tools:layout="@layout/layout_waec_payment_fragment"
-        android:name="com.epawo.egole.fragment.education.WaecPaymentFragment"
+        android:name="com.epawo.custodian.fragment.education.WaecPaymentFragment"
         android:label="WaecPaymentFragment" />
     <fragment
         android:id="@+id/autoRegFragment"
         tools:layout="@layout/layout_auto_reg_fragment"
-        android:name="com.epawo.egole.fragment.auto_reg.AutoRegFragment"
+        android:name="com.epawo.custodian.fragment.auto_reg.AutoRegFragment"
         android:label="AutoRegFragment" />
     <fragment
         android:id="@+id/createTicketFragment"
         tools:layout="@layout/layout_create_ticket_fragment"
-        android:name="com.epawo.egole.fragment.ticket.CreateTicketFragment"
+        android:name="com.epawo.custodian.fragment.ticket.CreateTicketFragment"
         android:label="CreateTicketFragment" />
     <fragment
         android:id="@+id/ticketListFragment"
         tools:layout="@layout/layout_ticket_list_fragment"
-        android:name="com.epawo.egole.fragment.ticket.TicketListFragment"
+        android:name="com.epawo.custodian.fragment.ticket.TicketListFragment"
         android:label="TicketListFragment" />
     <fragment
         android:id="@+id/transferDetailsFragment"
         tools:layout="@layout/layout_transfer_details_fragment"
-        android:name="com.epawo.egole.fragment.transfer.fund_transfer.TransferDetailsFragment"
+        android:name="com.epawo.custodian.fragment.transfer.fund_transfer.TransferDetailsFragment"
         android:label="TransferDetailsFragment" >
         <action
             android:id="@+id/action_transferDetailsFragment_to_homeFragment"
@@ -240,7 +240,7 @@
     <fragment
         android:id="@+id/airtimeRechargeFragment"
         tools:layout="@layout/layout_airtime_recharge_fragment"
-        android:name="com.epawo.egole.fragment.airtime.airtime.AirtimeRechargeFragment"
+        android:name="com.epawo.custodian.fragment.airtime.airtime.AirtimeRechargeFragment"
         android:label="AirtimeRechargeFragment" >
         <action
             android:id="@+id/action_airtimeRechargeFragment_to_airtimeRechargeDetailsFragment"
@@ -253,7 +253,7 @@
     <fragment
         android:id="@+id/airtimeRechargeDetailsFragment"
         tools:layout="@layout/layout_airtime_recharge_details_fragment"
-        android:name="com.epawo.egole.fragment.airtime.airtime.AirtimeRechargeDetailsFragment"
+        android:name="com.epawo.custodian.fragment.airtime.airtime.AirtimeRechargeDetailsFragment"
         android:label="AirtimeRechargeDetailsFragment" >
         <action
             android:id="@+id/action_airtimeRechargeDetailsFragment_to_homeFragment"
@@ -268,7 +268,7 @@
     <fragment
         android:id="@+id/electricityDetailsFragment"
         tools:layout="@layout/layout_electricity_details_fragment"
-        android:name="com.epawo.egole.fragment.electricity.ElectricityDetailsFragment"
+        android:name="com.epawo.custodian.fragment.electricity.ElectricityDetailsFragment"
         android:label="ElectricityDetailsFragment" >
         <action
             android:id="@+id/action_electricityDetailsFragment_to_homeFragment"
@@ -283,7 +283,7 @@
     <fragment
         android:id="@+id/dataRechargeDetailsFragment"
         tools:layout="@layout/layout_data_recharge_details_fragment"
-        android:name="com.epawo.egole.fragment.airtime.data.DataRechargeDetailsFragment"
+        android:name="com.epawo.custodian.fragment.airtime.data.DataRechargeDetailsFragment"
         android:label="DataRechargeDetailsFragment" >
         <action
             android:id="@+id/action_dataRechargeDetailsFragment_to_homeFragment"
@@ -298,7 +298,7 @@
     <fragment
         android:id="@+id/dataRechargeFragment"
         tools:layout="@layout/layout_airtime_date_fragment"
-        android:name="com.epawo.egole.fragment.airtime.data.DataRechargeFragment"
+        android:name="com.epawo.custodian.fragment.airtime.data.DataRechargeFragment"
         android:label="DataRechargeFragment" >
         <action
             android:id="@+id/action_dataRechargeFragment_to_dataRechargeDetailsFragment"
@@ -311,7 +311,7 @@
     <fragment
         android:id="@+id/cablePaymentDetailsFragment"
         tools:layout="@layout/layout_cable_paymet_details_fragment"
-        android:name="com.epawo.egole.fragment.cable_tv.CablePaymentDetailsFragment"
+        android:name="com.epawo.custodian.fragment.cable_tv.CablePaymentDetailsFragment"
         android:label="CablePaymentDetailsFragment" >
         <action
             android:id="@+id/action_cablePaymentDetailsFragment_to_homeFragment"
@@ -326,7 +326,7 @@
     <fragment
         android:id="@+id/cashoutFragment"
         tools:layout="@layout/layout_cashout_fragment"
-        android:name="com.epawo.egole.fragment.cashout.CashoutFragment"
+        android:name="com.epawo.custodian.fragment.cashout.CashoutFragment"
         android:label="CashoutFragment" >
         <action
             android:id="@+id/action_cashoutFragment_to_searchCardFragment"
@@ -353,11 +353,11 @@
     <fragment
         android:id="@+id/searchCardFragment"
         tools:layout="@layout/layout_insert_card_fragment"
-        android:name="com.epawo.egole.fragment.cashout.SearchCardFragment"
+        android:name="com.epawo.custodian.fragment.cashout.SearchCardFragment"
         android:label="SearchCardFragment" />
     <fragment
         android:id="@+id/printFragment"
-        android:name="com.epawo.egole.fragment.cashout.PrintFragment"
+        android:name="com.epawo.custodian.fragment.cashout.PrintFragment"
         tools:layout="@layout/print_fragment_layout"
         android:label="PrintFragment" >
         <action
@@ -373,7 +373,7 @@
     <fragment
         android:id="@+id/transactionHistoryFragment"
         tools:layout="@layout/layout_transaction_history"
-        android:name="com.epawo.egole.fragment.transactions.TransactionHistoryFragment"
+        android:name="com.epawo.custodian.fragment.transactions.TransactionHistoryFragment"
         android:label="TransactionHistoryFragment" >
         <action
             android:id="@+id/action_transactionHistoryFragment_to_transactionDetailsFragment"
@@ -386,12 +386,12 @@
     <fragment
         android:id="@+id/transactionDetailsFragment"
         tools:layout="@layout/layout_transaction_details_fragment"
-        android:name="com.epawo.egole.fragment.transactions.TransactionDetailsFragment"
+        android:name="com.epawo.custodian.fragment.transactions.TransactionDetailsFragment"
         android:label="TransactionDetailsFragment" />
     <fragment
         android:id="@+id/moreHomeFragment"
         tools:layout="@layout/layout_home_more_fragment"
-        android:name="com.epawo.egole.fragment.home.MoreHomeFragment"
+        android:name="com.epawo.custodian.fragment.home.MoreHomeFragment"
         android:label="MoreHomeFragment" >
         <action
             android:id="@+id/action_moreHomeFragment_to_createTicketFragment"
@@ -474,7 +474,7 @@
     <fragment
         android:id="@+id/profileFragment"
         tools:layout="@layout/layout_profile_fragment"
-        android:name="com.epawo.egole.fragment.profile.ProfileFragment"
+        android:name="com.epawo.custodian.fragment.profile.ProfileFragment"
         android:label="ProfileFragment" >
         <action
             android:id="@+id/action_profileFragment_to_editProfileFragment"
@@ -487,12 +487,12 @@
     <fragment
         android:id="@+id/editProfileFragment"
         tools:layout="@layout/layout_edit_profile_fragment"
-        android:name="com.epawo.egole.fragment.profile.editProfile.EditProfileFragment"
+        android:name="com.epawo.custodian.fragment.profile.editProfile.EditProfileFragment"
         android:label="EditProfileFragment" />
     <fragment
         android:id="@+id/bettingFragment"
         tools:layout="@layout/layout_betting_fragment"
-        android:name="com.epawo.egole.fragment.betting.BettingFragment"
+        android:name="com.epawo.custodian.fragment.betting.BettingFragment"
         android:label="BettingFragment" >
         <action
             android:id="@+id/action_bettingFragment_to_bettingLookupFragment"
@@ -505,12 +505,12 @@
     <fragment
         android:id="@+id/bettingLookupFragment"
         tools:layout="@layout/layout_betting_lookup_fragment"
-        android:name="com.epawo.egole.fragment.betting.BettingLookupFragment"
+        android:name="com.epawo.custodian.fragment.betting.BettingLookupFragment"
         android:label="BettingLookupFragment" />
     <fragment
         android:id="@+id/insuranceFragment"
         tools:layout="@layout/layout_insurance_fragment"
-        android:name="com.epawo.egole.fragment.insurance.InsuranceFragment"
+        android:name="com.epawo.custodian.fragment.insurance.InsuranceFragment"
         android:label="@string/insurance">
 
         <action
@@ -526,7 +526,7 @@
     <fragment
         android:id="@+id/insuranceDetailFragment"
         tools:layout="@layout/layout_insurance_detail_fragment"
-        android:name="com.epawo.egole.fragment.insurance.InsuranceDetailFragment"
+        android:name="com.epawo.custodian.fragment.insurance.InsuranceDetailFragment"
         android:label="@string/insurance_detail">
 
         <action
@@ -541,7 +541,7 @@
     <fragment
         android:id="@+id/insuranceCashoutFragment"
         tools:layout="@layout/layout_insurancepay_fragment"
-        android:name="com.epawo.egole.fragment.insurance.InsurancePayFragment">
+        android:name="com.epawo.custodian.fragment.insurance.InsurancePayFragment">
 
         <action
             android:id="@+id/action_insuranceCashoutFragment_to_searchCardFragment"

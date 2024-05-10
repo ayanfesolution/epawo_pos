@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.epawo.egole'
+    namespace 'com.epawo.custodian'
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.epawo.egole"
+        applicationId "com.epawo.custodian"
         minSdk 22
         targetSdk 32
         versionCode 13
