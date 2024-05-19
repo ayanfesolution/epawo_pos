@@ -15,6 +15,7 @@ import com.epawo.custodian.databinding.PrintFragmentLayoutBinding
 import com.epawo.custodian.fragment.BaseFragment
 import com.epawo.custodian.fragment.NavigationCommand
 import com.epawo.custodian.utilities.AppPreferences
+import com.epawo.custodian.utilities.UrlConstants
 import com.epawo.custodian.utilities.Utility
 import com.topwise.cloudpos.aidl.AidlDeviceService
 import com.topwise.cloudpos.aidl.printer.*
@@ -161,7 +162,7 @@ class PrintFragment : BaseFragment() {
             template.add(1, TextUnit("Expiry DATE:", TextUnit.TextSize.NORMAL,Align.LEFT).setBold(false),1, TextUnit(
                 "$expiryDate", TextUnit.TextSize.NORMAL, Align.RIGHT).setBold(true))
             template.add(1, TextUnit("AUTHORIZATION CODE:", TextUnit.TextSize.NORMAL,Align.LEFT).setBold(false),1, TextUnit(
-                    "000000", TextUnit.TextSize.NORMAL, Align.RIGHT).setBold(true))
+                "000000", TextUnit.TextSize.NORMAL, Align.RIGHT).setBold(true))
             template.add(TextUnit("................................................................."))
             template.add(TextUnit("App Version " + BuildConfig.VERSION_NAME, TextUnit.TextSize.SMALL, Align.CENTER).setBold(true))
             template.add(TextUnit("Thanks for using EPAWO POS", TextUnit.TextSize.SMALL, Align.CENTER).setBold(true))

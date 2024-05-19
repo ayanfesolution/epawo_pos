@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -91,6 +92,7 @@ class LoginFragment : BaseFragment(), LoginContract.LoginView {
                 AppConstants.DEVICE_NAME,userAgent, AppConstants.BRAND_NAME, AppConstants.BRAND, deviceSerialNumber) //P260301173630
             val gson = Gson()
             val stringRequest = gson.toJson(loginRequest)
+            Log.i("login payload", stringRequest)
             loginPresenter.userLogin(loginRequest)
         }
     }
