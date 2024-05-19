@@ -51,7 +51,7 @@ class TransactionDetailsFragment : BaseFragment() {
     var mListen: AidlPrinterListener = object : AidlPrinterListener.Stub() {
         @Throws(RemoteException::class)
         override fun onError(i: Int) {
-           // toastShort("Print error, error code: $i")
+            toastShort("Print error, error code: $i")
         }
 
         @Throws(RemoteException::class)
