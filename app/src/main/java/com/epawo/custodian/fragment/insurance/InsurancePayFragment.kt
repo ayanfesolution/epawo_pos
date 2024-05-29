@@ -7,6 +7,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.RadioGroup
@@ -58,6 +60,7 @@ class InsurancePayFragment: BaseFragment(), InsurancePolicyContract.InsuranceCas
     lateinit var pinThree : EditText
     lateinit var pinFour : EditText
     lateinit var presenter: InsuranceCashoutPresenter
+    lateinit var thirdPartyID: String
 
     lateinit var amount: String
     lateinit var bizName: String
@@ -68,6 +71,8 @@ class InsurancePayFragment: BaseFragment(), InsurancePolicyContract.InsuranceCas
 
     lateinit var phone: String
     lateinit var desc: String
+
+    lateinit var numOfInstallment: String
 
     private var _binding: LayoutInsurancepayFragmentBinding? = null
     private val binding get() = _binding!!
@@ -93,12 +98,17 @@ class InsurancePayFragment: BaseFragment(), InsurancePolicyContract.InsuranceCas
         init()
     }
 
+    override fun onException(message: String?) {
+        toastShort(message)
+    }
+
     private fun init(){
         extractBundles()
         Handler().postDelayed({ downloadConfig() }, 3000L)
         terminalId = AppPreferences().getTerminalId(mainActivity).toString()
         setListeners()
         setControls()
+        setupAutoCompleteTextView()
     }
 
     private fun setControls(){
@@ -110,7 +120,7 @@ class InsurancePayFragment: BaseFragment(), InsurancePolicyContract.InsuranceCas
 
     private fun setListeners(){
         binding.nextButton.setOnClickListener { onNextButtonClick() }
-       // binding.imageView3.setOnClickListener{ onBackButtonClick() }
+        binding.imageView3.setOnClickListener { navigate(NavigationCommand.Back)}
         checkButtonGroupClick()
     }
 
@@ -138,6 +148,7 @@ class InsurancePayFragment: BaseFragment(), InsurancePolicyContract.InsuranceCas
         policyNumber = bundle?.getString("policyNumber").toString()
         phone = bundle?.getString("phone").toString()
         desc = bundle?.getString("desc").toString()
+        thirdPartyID = bundle?.getString("3rd_party_id").toString()
     }
 
     private fun onNextButtonClick(){
@@ -152,6 +163,27 @@ class InsurancePayFragment: BaseFragment(), InsurancePolicyContract.InsuranceCas
         }else{
             toastShort(UrlConstants.NO_INTERNET)
         }
+    }
+
+    private fun setupAutoCompleteTextView() {
+        // List of numbers from 1 to 5
+        val numbers = listOf("1", "2", "3", "4", "5")
+
+        // Initialize the AutoCompleteTextView
+        val autoCompleteTextView: AutoCompleteTextView = binding.providerFilledExposedDropdown
+
+        // Create an ArrayAdapter with the list of numbers
+        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_dropdown_item_1line, numbers)
+
+        // Set the adapter to the AutoCompleteTextView
+        autoCompleteTextView.setAdapter(adapter)
+
+        // Set an item click listener to update the text when an item is selected
+        autoCompleteTextView.setOnItemClickListener { parent, view, position, id ->
+            autoCompleteTextView.setText(numbers[position], false)
+            numOfInstallment = numbers[position]
+        }
+
     }
 
     private fun downloadConfig(){
@@ -216,9 +248,13 @@ class InsurancePayFragment: BaseFragment(), InsurancePolicyContract.InsuranceCas
             cardExpiry = model.cardExpiry
             var cardData = CardData(expiryMonth, expiryYear,cardNumber,model.pinBlock,
                 model.cardTrackTwoNumber)
-            val request = InsuranceCashoutRequest(selectedAccountType.toInt(),
-            bizName,cardData, model.cardSequenceNumber,desc,email, model.cardIccData, name, "Custodian Premium Payment",
-                phone, "", policyNumber, 0, 50,terminalId, walletAccount)
+            var request = InsuranceCashoutRequest(walletAccount, terminalId,  "",
+                policyNumber, thirdPartyID, 50, numOfInstallment.toInt(),
+                "", 50, selectedAccountType.toInt(), cardData,
+                model.cardSequenceNumber, model.cardIccData, 0)
+//            val request = InsuranceCashoutRequest(selectedAccountType.toInt(),
+//            bizName,cardData, model.cardSequenceNumber,desc,email, model.cardIccData, name, "Custodian Premium Payment",
+//                phone, "", policyNumber, 0, 50,terminalId, walletAccount)
 //            val request = InsuranceCashoutRequest(selectedAccountType.toInt(),
 //                bizName,cardData, model.cardSequenceNumber,desc,email, model.cardIccData, name, "Custodian Premium Payment",
 //                phone, model.pinBlock, policyNumber, 0, amount.toInt(),terminalId, walletAccount)
@@ -365,15 +401,67 @@ class InsurancePayFragment: BaseFragment(), InsurancePolicyContract.InsuranceCas
     }
 
     override fun onSuccess(response: InsuranceCashoutResponse) {
-        val amount = amountInputed
-        val pan = Utility.maskCardPan(cardNumber)
-        val status = "Transaction Successful"
-        val responseCode = response.status
-        val description = response.message
-        val terminalID = terminalId
-        val ref = "reference"
 
-        getTransactionDetails(responseCode.toString(),pan,amount,status,description, terminalID,customerName,ref)
+        if (response.statusCode == 0) {
+
+            val amount = amountInputed
+            val pan = Utility.maskCardPan(cardNumber)
+            val status = "Transaction Successful"
+//        val amount = amountInputed
+//        val pan = Utility.maskCardPan(cardNumber)
+//        val status = "Transaction Successful"
+//        val responseCode = response.status
+//        val description = response.message
+//        val terminalID = terminalId
+//        val ref = "reference"
+            val responseCode = response.content.statusCode
+            val description = response.content.responseMessage.toString()
+            val terminalID = response.content.terminalID
+            val ref = response.content.referenceNumber
+            val gson = Gson()
+            Log.i("Response Payload", gson.toJson(response).toString())
+
+            getTransactionDetails(
+                responseCode,
+                pan,
+                amount,
+                status,
+                description,
+                terminalID,
+                customerName,
+                ref
+            )
+        } else {
+            val amount = amountInputed
+            val pan = Utility.maskCardPan(cardNumber)
+            val status = "Transaction Successful"
+//        val amount = amountInputed
+//        val pan = Utility.maskCardPan(cardNumber)
+//        val status = "Transaction Successful"
+//        val responseCode = response.status
+//        val description = response.message
+//        val terminalID = terminalId
+//        val ref = "reference"
+            val responseCode = response.statusCode.toString()
+            val description = response.result.message
+            val terminalID = terminalId
+            val ref = "Reference"
+            val gson = Gson()
+            Log.i("Response Payload", gson.toJson(response).toString())
+
+//
+//            getTransactionDetails(
+//                responseCode,
+//                pan,
+//                amount,
+//                status,
+//                description,
+//                terminalID,
+//                customerName,
+//                ref
+//            )
+        }
+
     }
 
 }

@@ -11,8 +11,8 @@ android {
         applicationId "com.epawo.custodian"
         minSdk 22
         targetSdk 32
-        versionCode 13
-        versionName "2.15"
+        versionCode 15
+        versionName "2.17"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

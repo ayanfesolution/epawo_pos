@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import com.epawo.custodian.R
 import com.epawo.custodian.databinding.LayoutInsuranceFragmentBinding
 import com.epawo.custodian.fragment.BaseFragment
+import com.epawo.custodian.fragment.NavigationCommand
 import com.epawo.custodian.model.insurance.InsuranceDetailResponse
 import com.epawo.custodian.model.insurance.InsuranceDetailsRequest
 import com.epawo.custodian.utilities.AppPreferences
@@ -49,6 +50,7 @@ class InsuranceFragment : BaseFragment(), InsurancePolicyContract.InsurancePolic
 
     private fun setListeners(){
         binding.continueButton.setOnClickListener { onContinueButtonClick() }
+        binding.imageView3.setOnClickListener { navigate(NavigationCommand.Back)}
     }
 
     private fun onContinueButtonClick(){
@@ -83,15 +85,21 @@ class InsuranceFragment : BaseFragment(), InsurancePolicyContract.InsurancePolic
     }
 
     override fun onSuccess(response: InsuranceDetailResponse) {
-        val bundle = Bundle()
-        bundle.putString("bizUnit",response.data.bizUnitField)
-        bundle.putString("insuredName", response.data.insuredNameField)
-        bundle.putString("insuredEmail", response.data.insuredEmailField)
-        bundle.putString("amount", response.data.instPremiumField.toString())
-        bundle.putString("policyNumber", policyNumber)
-        bundle.putString("phone", response.data.insuredTelNumField)
-        bundle.putString("desc", response.data.agenctNameField)
-        navigate(R.id.action_insuranceFragment_to_insuranceDetailFragment, bundle)
+
+        if (response.status == 200) {
+            val bundle = Bundle()
+            bundle.putString("bizUnit", "Custodian Insurance Payment")
+           bundle.putString("insuredName", response.data.policy_holder.full_name)
+            bundle.putString("insuredEmail", response.data.policy_holder.email_address.toString())
+            bundle.putString("amount", response.data.payment_info.installment_payment.toString())
+            bundle.putString("policyNumber", response.data.policy_number)
+            bundle.putString("phone", response.data.policy_holder.mobile)
+            bundle.putString("desc", response.data.policy_holder.customer_id)
+            bundle.putString("3rd_party_id", response.extra_data.third_party_id)
+            navigate(R.id.action_insuranceFragment_to_insuranceDetailFragment, bundle)
+        } else {
+            toastShort(response.message)
+        }
 //        bundle.putString("providerCode", providerCode)
 //        bundle.putString("decoderNumber", cableNumber)
 //        bundle.putString("serviceCode", serviceCode)

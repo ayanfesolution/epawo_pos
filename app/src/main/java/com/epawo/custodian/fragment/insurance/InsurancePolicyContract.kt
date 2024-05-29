@@ -22,12 +22,15 @@ interface InsurancePolicyContract {
         fun showToast(message : String?)
         fun showProgress()
         fun hideProgress()
+        fun onException(message: String?)
         fun onSuccess(response : InsuranceCashoutResponse)
     }
 
     interface InsuranceCashoutListener{
         fun onSuccess(response : InsuranceCashoutResponse)
         fun onFailure(message : String?)
+
+        fun onException(message : String?)
     }
 
 

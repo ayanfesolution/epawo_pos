@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import com.epawo.custodian.R
 import com.epawo.custodian.databinding.LayoutInsuranceDetailFragmentBinding
 import com.epawo.custodian.fragment.BaseFragment
+import com.epawo.custodian.fragment.NavigationCommand
 import com.epawo.custodian.utilities.Utility
 import com.topwise.cloudpos.aidl.AidlDeviceService
 
@@ -20,6 +21,7 @@ class InsuranceDetailFragment: BaseFragment() {
     lateinit var phone: String
     lateinit var desc: String
     lateinit var policyNumber: String
+    lateinit var thirdPartyID: String
 
     override fun onDeviceConnected(serviceManager: AidlDeviceService?) {
 
@@ -54,6 +56,7 @@ class InsuranceDetailFragment: BaseFragment() {
         policyNumber = bundle?.getString("policyNumber").toString()
         phone = bundle?.getString("phone").toString()
         desc = bundle?.getString("desc").toString()
+        thirdPartyID = bundle?.getString("3rd_party_id").toString()
     }
 
     private fun setControls(){
@@ -65,6 +68,7 @@ class InsuranceDetailFragment: BaseFragment() {
 
     private fun setListeners(){
         binding.proceedButton.setOnClickListener { onContinueButtonClick() }
+        binding.imageView3.setOnClickListener { navigate(NavigationCommand.Back)}
     }
 
     private fun onContinueButtonClick(){
@@ -76,6 +80,7 @@ class InsuranceDetailFragment: BaseFragment() {
         bundle.putString("policyNumber", policyNumber)
         bundle.putString("phone", phone)
         bundle.putString("desc", desc)
+        bundle.putString("3rd_party_id",thirdPartyID)
         navigate(R.id.action_insuranceDetailFragment_to_insuranceCashout, bundle)
     }
 

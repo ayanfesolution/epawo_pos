@@ -37,6 +37,15 @@ class InsuranceCashoutInteractor(listener: InsurancePolicyContract.InsuranceCash
     private fun insuranceCashoutObservable(): DisposableObserver<InsuranceCashoutResponse> {
         return object : DisposableObserver<InsuranceCashoutResponse>() {
             override fun onNext(response: InsuranceCashoutResponse) {
+                if (response.content == null) {
+                    listener.onException(response.result.message)
+                } else {
+                    if(response.content.statusCode == "00") {
+                        listener.onSuccess(response)
+                    }else{
+                        listener.onException(response.content.description)
+                    }
+                }
                 listener.onSuccess(response)
             }
 

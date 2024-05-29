@@ -25,6 +25,11 @@ class InsuranceCashoutPresenter(view: InsurancePolicyContract.InsuranceCashoutVi
         view.showToast(message)
     }
 
+    override fun onException(message: String?) {
+        view.hideProgress()
+        view.onException(message)
+    }
+
     fun insuranceCashout(token : String, request : InsuranceCashoutRequest){
         view.showProgress()
         interactor.insuranceCashout(token, request)
